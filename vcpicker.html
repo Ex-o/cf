@@ -37,11 +37,11 @@
 </head>
 
 <body>
-    <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="header mdl-layout__header mdl-layout__header--waterfall mdl-color--black-100 mdl-color-text--black-100 mdl-shadow--3dp">
+    <div class="layout mdl-layout mdl-js-layout mdl-layout-header">
+        <header class="header mdl-layout__header mdl-layout__header mdl-color--black-100 mdl-color-text--black-100 mdl-shadow--3dp">
             <div class="mdl-layout__header-row">
-                    <img class="meducian-logo" src="logo.gif" width="50px">
-                    <!--img class="meducian-logo" src="https://im5.ezgif.com/tmp/ezgif-5-aaa6c75750.gif" width="50px"-->
+                <img class="meducian-logo" src="logo.gif" width="50px">
+                <!--img class="meducian-logo" src="https://im5.ezgif.com/tmp/ezgif-5-aaa6c75750.gif" width="50px"-->
                 <span class="mdl-layout__title mdl-color-text--black-blue-100">CP Community</span>
                 <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation mdl-layout--large-screen-only">
@@ -69,41 +69,36 @@
             </div>
         </header>
         <main class="mdl-layout__content mdl-color--grey-100">
-            <div id="handleGrid" class="hidden mdl-grid content">
-                <div id="pls" class="handle-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col">
-                    <form action="" id="handleform">
-                        <div class="mdl-textfield mdl-js-textfield" id="handleDiv">
-                            <input type="text" class="mdl-textfield__input" name="handle" id="handle">
-                            <label class="mdl-textfield__label" for="handle">Codeforces User Handle</label>
-                            <span id="handleDivErr" class="mdl-textfield__error">Couldn't find user. Network problem?</span>
-                        </div>
-                    </form>
-                </div>
-            </div>
             <div class="mdl-grid content">
-                <div class="to-hide demo-card-wide mdl-card mdl-shadow--3dp mdl-cell mdl-cell--12-col">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Welcome</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Competitive Programming Community is a community of commpetitive programmers on Discord focused on discussing algorithmic
-                        problems daily.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <button id="discordBtn" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                            Join Discord
-                        </button>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                            Continue
-                        </a>
-                    </div>
-                    <div class="mdl-card__menu">
-                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                        </button>
-                    </div>
+                <div class="to-hide demo-card-wide mdl-card mdl-shadow--3dp mdl-cell mdl-cell--8-col">
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                    <thead id="lol">
+                        <tr class="mdl-color--grey-300">
+                            <th class="mdl-data-table__cell--non-numeric">Handle</th>
+                            <th>Rank</th>
+                            <th>Last Contest</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">OO0OOO00O0OOO0O00OOO0OO</td>
+                            <td>1</td>
+                            <td>497</td>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Laggy</td>
+                            <td>2</td>
+                            <td>497</td>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Noam527</td>
+                            <td>3</td>
+                            <td>497</td>
+                        </tr>
+                    </tbody>
+                </table>
                 </div>
             </div>
-            
         </main>
     </div>
 </body>

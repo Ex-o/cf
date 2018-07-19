@@ -243,9 +243,12 @@ body {
 }
 
 .layout .mdl-layout__header .mdl-layout__drawer-button {
-  color: rgba(0, 0, 0, 0.54);
+  color: rgba(0, 0, 0, 0);
 }
 
+.mdl-navigation {
+  height: 50px;
+}
 .mdl-layout__drawer .avatar {
   margin-bottom: 16px;
 }
@@ -297,7 +300,11 @@ body {
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
-
+.mdl-layout__title {
+  color: black;
+  font: bold;
+  font-size: 25px;
+}
 .layout .navigation .mdl-navigation__link {
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -308,13 +315,14 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #424242;
+  color: #f7a4a4;
   font-weight: 500;
 }
 
+
 .layout .navigation .mdl-navigation__link:hover {
   background-color: #00BCD4;
-  color: #37474F;
+  color: #00BCD4;
 }
 
 .navigation .mdl-navigation__link .material-icons {
