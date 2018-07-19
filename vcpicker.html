@@ -37,8 +37,8 @@
 </head>
 
 <body>
-    <div class="layout mdl-layout mdl-js-layout mdl-layout-header">
-        <header class="header mdl-layout__header mdl-layout__header mdl-color--black-100 mdl-color-text--black-100 mdl-shadow--3dp">
+    <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="header mdl-layout__header mdl-layout__header--fixed mdl-color--black-100 mdl-color-text--black-100 mdl-shadow--3dp">
             <div class="mdl-layout__header-row">
                 <img class="meducian-logo" src="logo.gif" width="50px">
                 <!--img class="meducian-logo" src="https://im5.ezgif.com/tmp/ezgif-5-aaa6c75750.gif" width="50px"-->
@@ -68,35 +68,48 @@
                 </nav>
             </div>
         </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+                <span id='logo'>CPC</span>
+                <nav class="navigation mdl-navigation">
+                    <a href="index.html" class="mdl-navigation__link">
+                        <i class="mdl-color-text--deep_orange-teal-400 material-icons" role="presentation">donut_small</i> Analyze </a>
+                    <a href="compare.html" class="mdl-navigation__link">
+                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">compare</i> Compare</a>
+                    <a href="virtual-rating-change.html" class="mdl-navigation__link">
+                        <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">trending_up</i>Virtual Rating Change</a>
+                    <a href="about.html" class="mdl-navigation__link">
+                        <i class="mdl-color-text--yellow-brown-400 material-icons" role="presentation">search</i> Virtual Contest Picker </a>
+                </nav>
+            </div>
         <main class="mdl-layout__content mdl-color--grey-100">
             <div class="mdl-grid content">
                 <div class="to-hide demo-card-wide mdl-card mdl-shadow--3dp mdl-cell mdl-cell--8-col">
                     <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                    <thead id="lol">
-                        <tr class="mdl-color--grey-300">
-                            <th class="mdl-data-table__cell--non-numeric">Handle</th>
-                            <th>Rank</th>
-                            <th>Last Contest</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">OO0OOO00O0OOO0O00OOO0OO</td>
-                            <td>1</td>
-                            <td>497</td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Laggy</td>
-                            <td>2</td>
-                            <td>497</td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Noam527</td>
-                            <td>3</td>
-                            <td>497</td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <thead id="lol">
+                            <tr class="mdl-color--grey-300">
+                                <th class="mdl-data-table__cell--non-numeric">Handle</th>
+                                <th>Rank</th>
+                                <th>Last Contest</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">OO0OOO00O0OOO0O00OOO0OO</td>
+                                <td>1</td>
+                                <td>497</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Laggy</td>
+                                <td>2</td>
+                                <td>497</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Noam527</td>
+                                <td>3</td>
+                                <td>497</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </main>

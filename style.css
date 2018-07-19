@@ -243,9 +243,13 @@ body {
 }
 
 .layout .mdl-layout__header .mdl-layout__drawer-button {
-  color: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
 }
-
+.layout .mdl-layout__header .mdl-layout__drawer-button .material-icons{
+  box-sizing: border-box;
+  padding: 12px;
+  height: 170px;
+}
 .mdl-navigation {
   height: 50px;
 }
@@ -333,4 +337,13 @@ body {
 
 .content {
   max-width: 1080px;
+}
+
+.mdl-layout__drawer {
+  background: rgba(0, 0, 0, 0.795);  
+  color: rgb(255, 255, 255);
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+ color: rgb(255, 255, 255); 
 }

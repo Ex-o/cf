@@ -8,8 +8,8 @@
     <title>Codeforces Visualizer</title>
     <!-- Open Graph meta -->
     <meta property="og:url" content="url" />
-    <meta property="og:title" content="Codeforces Visualizer" />
-    <meta property="og:description" content="Visually analyze and compare codeforces user profiles" />
+    <meta property="og:title" content="CP Community" />
+    <meta property="og:description" content="Coming soon." />
     <meta property="og:image" content="url/images/og.jpg" />
     <meta property="fb:app_id" content="id" />
     <!-- Add to homescreen for Chrome on Android -->
@@ -38,10 +38,10 @@
 
 <body>
     <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="header mdl-layout__header mdl-layout__header--waterfall mdl-color--black-100 mdl-color-text--black-100 mdl-shadow--3dp">
+        <header class="header mdl-layout__header mdl-layout__header--fixed mdl-color--black-100 mdl-color-text--black-100 mdl-shadow--3dp">
             <div class="mdl-layout__header-row">
-                    <img class="meducian-logo" src="logo.gif" width="50px">
-                    <!--img class="meducian-logo" src="https://im5.ezgif.com/tmp/ezgif-5-aaa6c75750.gif" width="50px"-->
+                <img class="meducian-logo" src="logo.gif" width="50px">
+                <!--img class="meducian-logo" src="https://im5.ezgif.com/tmp/ezgif-5-aaa6c75750.gif" width="50px"-->
                 <span class="mdl-layout__title mdl-color-text--black-blue-100">CP Community</span>
                 <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation mdl-layout--large-screen-only">
@@ -49,11 +49,11 @@
                         <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">donut_small</i> Analyze
                         <span class="mdl-ripple"></span>
                     </a>
-                    <a href="compare.html" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                    <a href="" class="mdl-button mdl-js-button mdl-js-ripple-effect">
                         <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">compare</i> Compare
                         <span class="mdl-ripple"></span>
                     </a>
-                    <a href="virtual-rating-change.html" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                    <a href="" class="mdl-button mdl-js-button mdl-js-ripple-effect">
                         <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">trending_up</i> Virtual Rating Change
                         <span class="mdl-ripple"></span>
                     </a>
@@ -61,13 +61,26 @@
                         <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">search</i> Virtual Contest Picker
                         <span class="mdl-ripple"></span>
                     </a>
-                    <a href="virtual-rating-change.html" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                    <a href="" class="mdl-button mdl-js-button mdl-js-ripple-effect">
                         <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">chat</i> Discord
                         <span class="mdl-ripple"></span>
                     </a>
                 </nav>
             </div>
         </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <span id='logo'>CPC</span>
+            <nav class="navigation mdl-navigation">
+                <a href="index.html" class="mdl-navigation__link">
+                    <i class="mdl-color-text--deep_orange-teal-400 material-icons" role="presentation">donut_small</i> Analyze </a>
+                <a href="compare.html" class="mdl-navigation__link">
+                    <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">compare</i> Compare</a>
+                <a href="virtual-rating-change.html" class="mdl-navigation__link">
+                    <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">trending_up</i>Virtual Rating Change</a>
+                <a href="about.html" class="mdl-navigation__link">
+                    <i class="mdl-color-text--yellow-brown-400 material-icons" role="presentation">search</i> Virtual Contest Picker </a>
+            </nav>
+        </div>
         <main class="mdl-layout__content mdl-color--grey-100">
             <div id="handleGrid" class="hidden mdl-grid content">
                 <div id="pls" class="handle-card mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--6-col">
@@ -103,8 +116,9 @@
                     </div>
                 </div>
             </div>
-            
+
         </main>
+        <div class="mdl-layout__obfuscator"></div>
     </div>
 </body>
 
