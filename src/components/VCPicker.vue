@@ -1,5 +1,6 @@
 <template>
     <div class="picker-div">
+      <div class="column1">
         <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
             <thead>
                 <tr>
@@ -27,6 +28,23 @@
         <button @click="vc" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
             VC
         </button>
+      </div>
+      <table class="column2 mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+            <tr>
+            <th class="mdl-data-table__cell--non-numeric"><b>{{contestsTitle}}</b></th>
+            </tr>
+        </thead>
+        <tbody class="contests-list">
+            <tr v-for="contest in contests" :key="contest.id">
+                <td class="mdl-navigation__link mdl-data-table__cell--non-numeric">
+                  <a style="width: auto" class="mdl-navigation__link" :href="'http://codeforces.com/contest/' + contest.id">
+                    {{contest.name}}
+                  </a>
+                </td>
+            </tr>
+        </tbody>
+      </table>
     </div>
 </template>
 
@@ -37,7 +55,9 @@ export default {
   data() {
     return {
       input: "",
-      handles: []
+      handles: [],
+      contests: [],
+      contestsTitle: "Contests"
     };
   },
   mounted() {
@@ -45,7 +65,12 @@ export default {
   },
   methods: {
     vc() {
-      cf.vcWith(this.handles, data => console.log(data));
+      if (this.handles.length == 0) return;
+      this.contestsTitle = "Loading contests";
+      cf.vcWith(this.handles, data => {
+        this.contestsTitle = `${data.length} Contests`;
+        this.contests = data;
+      });
     },
     addHandle() {
       let handle = this.input.trim();
@@ -63,14 +88,47 @@ export default {
 </script>
 
 <style>
+body {
+}
+
 .picker-div {
-  width: 30%;
-  margin: 25px auto;
-  text-align: center;
+  width: auto;
+  padding-top: 5em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .removable-handle {
   float: right;
   cursor: pointer;
+}
+
+.column1,
+.column2 {
+  /* width: auto; */
+  min-width: calc(100% / 2 - 20px);
+  max-width: calc(100% / 2 - 20px);
+  /* padding: 10px; */
+  overflow: auto;
+  display: inline-block;
+}
+
+.column1 {
+  float: left;
+}
+
+.column2 {
+  float: right;
+}
+
+@media only screen and (max-width: 720px) {
+  .column1,
+  .column2 {
+    width: auto;
+    max-width: inherit;
+    margin: 0 auto;
+    float: none;
+    display: block;
+  }
 }
 </style>

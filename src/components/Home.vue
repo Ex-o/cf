@@ -10,7 +10,8 @@ export default {
     DiscordWidget: DiscordWidget
   },
   mounted() {
-    componentHandler.upgradeElement(this.$el.childNodes[0]);
+    componentHandler.upgradeDom();
+    // componentHandler.upgradeElement(this.$el.childNodes[0]);
   }
 }
 </script>
