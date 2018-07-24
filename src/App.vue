@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="vueapp">
     <AppContainer>
       <NavBar/>
       <div style="height: 5em"></div>
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style>
-#app {
+#vueapp {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
