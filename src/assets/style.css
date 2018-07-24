@@ -39,9 +39,9 @@ header {
 
 /*
 @media only screen and (min-width: 1025px) {
-  #mainSpinner {
-      left: calc(50% + 106px);
-  }
+#mainSpinner {
+    left: calc(50% + 106px);
+}
 }*/
 
 .handle-card {

@@ -1,6 +1,6 @@
 <template>
     <div class="mdl-grid content">
-        <div class="to-hide demo-card-wide mdl-card mdl-shadow--3dp mdl-cell mdl-cell--12-col">
+        <div class="demo-card-wide mdl-card mdl-shadow--3dp mdl-cell mdl-cell--12-col">
             <div class="mdl-card__title">
                 <h2 class="mdl-card__title-text">Welcome</h2>
             </div>
