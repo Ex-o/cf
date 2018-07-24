@@ -1,18 +1,16 @@
 .demo-card-wide.mdl-card {
-  width: 512px;
-}
+    width: 512px;
+  }
+  .demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('https://i.gifer.com/Xbs3.gif') center / cover;
+  }
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
 
-.demo-card-wide>.mdl-card__title {
-  color: #fff;
-  height: 176px;
-  background: url('https://i.gifer.com/Xbs3.gif') center / cover;
-}
-
-.demo-card-wide>.mdl-card__menu {
-  color: #fff;
-}
-
-/* Overriding default sidebar spacing */
+  /* Overriding default sidebar spacing */
 
 main {
   margin-left: 0px !important;
@@ -37,11 +35,12 @@ header {
   z-index: 10;
 }
 
+
 /*
 @media only screen and (min-width: 1025px) {
-#mainSpinner {
-    left: calc(50% + 106px);
-}
+  #mainSpinner {
+      left: calc(50% + 106px);
+  }
 }*/
 
 .handle-card {
@@ -80,6 +79,7 @@ table {
 a {
   text-decoration: none;
 }
+
 
 /* for footer */
 
@@ -124,6 +124,7 @@ a {
   height: 20px;
 }
 
+
 /*only for the about page*/
 
 .fb-comments {
@@ -146,6 +147,7 @@ a {
   margin-bottom: 20px;
 }
 
+
 /* only for index */
 
 #unsolvedCon {
@@ -153,8 +155,7 @@ a {
   background-color: white;
 }
 
-#unsolvedTitle,
-#commonContestTitle {
+#unsolvedTitle, #commonContestTitle {
   color: #393939;
   font-weight: 500;
   font-size: 20px;
@@ -171,19 +172,20 @@ a {
 }
 
 #heatmapMaxValue {
-  text-align: center;
+text-align: center;
 }
 
 .heatmap-text {
-  font-size: 12px;
-  text-align: center;
-  width: 155px;
+font-size: 12px;
+text-align: center;
+width: 155px;
 }
 
 .lnk {
   margin: 2px 5px;
   float: left;
 }
+
 
 /* only for compare */
 
@@ -194,7 +196,6 @@ a {
 .handle1Color {
   color: #009688;
 }
-
 .handle2Color {
   color: #3F51B5;
 }
@@ -203,8 +204,8 @@ a {
   width: 250px;
 }
 
-/* only for virtual */
 
+/* only for virtual */
 #info {
   padding: 40px;
 }
@@ -215,6 +216,7 @@ a {
   clear: both;
   text-align: center;
 }
+
 
 /* scrollbar (only for chrome and safari) */
 
@@ -232,6 +234,7 @@ a {
   background-color: #607D8B;
 }
 
+
 /*things I don't know much about*/
 
 html,
@@ -242,17 +245,14 @@ body {
 .layout .mdl-layout__header .mdl-layout__drawer-button {
   color: rgb(0, 0, 0);
 }
-
-.layout .mdl-layout__header .mdl-layout__drawer-button .material-icons {
+.layout .mdl-layout__header .mdl-layout__drawer-button .material-icons{
   box-sizing: border-box;
   padding: 12px;
   height: 170px;
 }
-
 .mdl-navigation {
   height: 50px;
 }
-
 .mdl-layout__drawer .avatar {
   margin-bottom: 16px;
 }
@@ -260,6 +260,7 @@ body {
 .drawer {
   border: none;
 }
+
 
 /* iOS Safari specific workaround */
 
@@ -270,6 +271,7 @@ body {
 .drawer .navigation {
   z-index: -2;
 }
+
 
 /* END iOS Safari specific workaround */
 
@@ -302,13 +304,11 @@ body {
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
-
 .mdl-layout__title {
   color: black;
   font: bold;
   font-size: 25px;
 }
-
 .layout .navigation .mdl-navigation__link {
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -322,6 +322,7 @@ body {
   color: #f7a4a4;
   font-weight: 500;
 }
+
 
 .layout .navigation .mdl-navigation__link:hover {
   background-color: #00BCD4;
@@ -339,10 +340,10 @@ body {
 }
 
 .mdl-layout__drawer {
-  background: rgba(0, 0, 0, 0.795);
+  background: rgba(0, 0, 0, 0.795);  
   color: rgb(255, 255, 255);
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
-  color: rgb(255, 255, 255);
+ color: rgb(255, 255, 255); 
 }
