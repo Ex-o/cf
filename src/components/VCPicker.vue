@@ -32,10 +32,24 @@
       <table class="column2 mdl-data-table mdl-js-data-table mdl-shadow--2dp">
         <thead>
             <tr>
-            <th class="mdl-data-table__cell--non-numeric"><b>{{contestsTitle}}</b></th>
+            <th class="mdl-data-table__cell--non-numeric">
+              <b>{{contestsTitle}}</b>
+                <!-- Expandable Textfield -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                  <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+                    <i class="material-icons">search</i>
+                  </label>
+                  <div class="mdl-textfield__expandable-holder">
+                    <input @keyup="filterContests" v-model="searchFilter" class="mdl-textfield__input" type="text" id="sample6">
+                    <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+                  </div>
+                </div>
+              </th>
             </tr>
         </thead>
         <tbody class="contests-list">
+            <tr>
+            </tr>
             <tr v-for="contest in contests" :key="contest.id">
                 <td class="mdl-navigation__link mdl-data-table__cell--non-numeric">
                   <a style="width: auto" class="mdl-navigation__link" :href="'http://codeforces.com/contest/' + contest.id">
@@ -55,8 +69,10 @@ export default {
   data() {
     return {
       input: "",
+      searchFilter: "",
       handles: [],
       contests: [],
+      allContests: [],
       contestsTitle: "Contests"
     };
   },
@@ -68,9 +84,17 @@ export default {
       if (this.handles.length == 0) return;
       this.contestsTitle = "Loading contests";
       cf.vcWith(this.handles, data => {
-        this.contestsTitle = `${data.length} Contests`;
-        this.contests = data;
+        this.allContests = data;
+        this.filterContests();
+        this.contestsTitle = `${contests.length} Contests`;
       });
+    },
+    filterContests() {
+      if (this.searchFilter)
+        this.contests = this.allContests.filter(s =>
+          s.name.toLowerCase().includes(this.searchFilter.toLowerCase())
+        );
+      else this.contests = this.allContests;
     },
     addHandle() {
       let handle = this.input.trim();
