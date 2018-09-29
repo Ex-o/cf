@@ -26,7 +26,7 @@
         </button>
         <!-- Raised button with ripple -->
         <button @click="vc" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-            VC
+            Gym
         </button>
       </div>
       <table class="column2 mdl-data-table mdl-js-data-table mdl-shadow--2dp">
@@ -50,7 +50,7 @@
         <tbody class="contests-list">
             <tr v-for="contest in contests" :key="contest.id">
                 <td class="mdl-navigation__link mdl-data-table__cell--non-numeric">
-                  <a style="width: auto" class="mdl-navigation__link" :href="'http://codeforces.com/contest/' + contest.id">
+                  <a style="width: auto" class="mdl-navigation__link" :href="'http://codeforces.com/gym/' + contest.id">
                     {{contest.name}}
                   </a>
                 </td>
@@ -63,7 +63,7 @@
 <script>
 import cf from "../js/codeforces.js";
 export default {
-  name: "VCPicker",
+  name: "GymPicker",
   data() {
     return {
       input: "",
@@ -81,7 +81,7 @@ export default {
     vc() {
       if (this.handles.length == 0) return;
       this.contestsTitle = "Loading Contests";
-      cf.vcWith(this.handles, data => {
+      cf.gymWith(this.handles, data => {
         this.allContests = data;
         this.filterContests();
         this.contestsTitle = `${this.allContests.length} Contests`;
@@ -119,12 +119,10 @@ body {
 }
 
 .picker-div {
-  
   width: auto;
   padding-top: 5em;
   padding-left: 1em;
   padding-right: 1em;
-  
 }
 
 .removable-handle {

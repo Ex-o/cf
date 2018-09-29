@@ -5,14 +5,14 @@
                 <h2 class="mdl-card__title-text">Welcome</h2>
             </div>
             <div class="mdl-card__supporting-text">
-                Competitive Programming Community is a community of commpetitive programmers on Discord focused on discussing algorithmic
-                problems daily.
+                Competitive Programming Community is a community of commpetitive programmers on Discord focused on discussing algorithmic problems daily.
+                Please note that some features are under maintenance.
             </div>
             <div class="mdl-card__actions mdl-card--border">
-                <a href="https://discord.gg" id="discordBtn" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                <a href="https://discord.gg" target="_blank" id="discordBtn" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                     Join Discord
                 </a>
-                <a :href="discordInviteLink" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                <a :href="discordInviteLink" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                     Continue
                 </a>
             </div>

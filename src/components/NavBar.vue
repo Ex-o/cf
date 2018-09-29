@@ -10,22 +10,34 @@
                         <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">donut_small</i> Home
                         <span class="mdl-ripple"></span>
                     </router-link>
-                    <a href="" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                    <a href="" id="cmp" class="mdl-button mdl-js-button mdl-js-ripple-effect">
                         <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">compare</i> Compare
                         <span class="mdl-ripple"></span>
                     </a>
-                    <a href="" class="mdl-button mdl-js-button mdl-js-ripple-effect">
-                        <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">trending_up</i> Virtual Rating Change
+                    <div class="mdl-tooltip" data-mdl-for="cmp">
+                        Currently under maintenance.
+                    </div>
+                    <router-link to="GymPicker" id="gymp" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                        <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">fitness_center</i> Gym Picker
                         <span class="mdl-ripple"></span>
-                    </a>
-                    <router-link to="VCPicker" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                    </router-link>
+                    <div class="mdl-tooltip" data-mdl-for="gymp">
+                        Pick a contest from the codeforces gym that you and your team haven't attempted before.
+                    </div>
+                    <router-link to="VCPicker" id="vcp" class="mdl-button mdl-js-button mdl-js-ripple-effect">
                         <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">search</i> Virtual Contest Picker
                         <span class="mdl-ripple"></span>
                     </router-link>
-                    <a href="https://discord.gg/algorithms" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                    <div class="mdl-tooltip" data-mdl-for="vcp">
+                        Pick a contest from the codeforces' rounds that you and your friends haven't attempted before.
+                    </div>
+                    <a href="https://discord.gg/algorithms" id="discord" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect">
                         <i class="mdl-color-text--black-grey-400 material-icons" role="presentation">chat</i> Discord
                         <span class="mdl-ripple"></span>
                     </a>
+                    <div class="mdl-tooltip" data-mdl-for="discord">
+                        Join the community's discord server and meet awesome people.
+                    </div>
                 </nav>
             </div>
         </header>
